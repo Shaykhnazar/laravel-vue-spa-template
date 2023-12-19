@@ -8,20 +8,22 @@
 </p>
 
 
-## Установка
+## Installation
 
-##### Установка зависимостей
+### Backend
+
+##### Installing dependencies
 ```
 composer install
 ```
 
-##### Создать .env и изменить его согласно локальному окружению
+##### Create .env and change it according to local environment
 ```
 cp .env.example .env
 ```
-Для продакшена `APP_ENV=production`
+For production `APP_ENV=production`
 
-Для разработки\тестирования `APP_ENV=local`
+For development\testing `APP_ENV=local`
 
 ##### Сгенерировать ключ проекта
 ```
@@ -29,17 +31,22 @@ php artisan key:generate
 ```
 
 
-##### Создать симлинк папки public на папку storage
+##### Create a symlink of the public folder to the storage folder
 ```
 php artisan storage:link
 ```
 
-##### Выполнить миграции
+##### Run migrations
 ```
 php artisan migrate:fresh --seed
 ```
 
-## Frontend
+#### Testing on local development (You can run it after setup!! [Frontend](#frontend))
+```
+php artisan serve
+```
+
+### Frontend
 ```
 cd frontend
 ```
@@ -49,4 +56,4 @@ npm install
 ```
 cp .env.example .env
 ```
-another commands at [here](/frontend/README.md):
+another commands at [here](frontend%2FREADME.md):
