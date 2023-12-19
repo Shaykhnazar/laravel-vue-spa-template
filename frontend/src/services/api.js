@@ -1,10 +1,12 @@
 import axios from 'axios'
+import _ from 'lodash'
 import { notify } from '@kyvg/vue3-notification'
 
 export default {
-    properties: {
-        listWithFilter: (data) => api().get('properties/', { params: data }),
-    }
+  // for example
+  //   auth: {
+  //       login: (data) => api().get('auth/login', { params: data }),
+  //   }
 }
 
 function api() {
